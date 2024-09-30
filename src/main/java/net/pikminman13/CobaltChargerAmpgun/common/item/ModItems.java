@@ -1,4 +1,4 @@
-package net.pikminman13.CobaltChargerAmpgun.item;
+package net.pikminman13.CobaltChargerAmpgun.common.item;
 
 import net.minecraft.world.item.Item;
 import net.neoforged.bus.api.IEventBus;
@@ -10,8 +10,8 @@ public class ModItems
 {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(CobaltChargerAmpgun.MODID);
 
-    public static final DeferredItem<Item> TESTITEM = ITEMS.register("testitem",
-            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> AMPGUN = ITEMS.register("ampgun",
+            () -> new Item(new Item.Properties().stacksTo(1)));
 
     public static void register(IEventBus eventBus)
     {

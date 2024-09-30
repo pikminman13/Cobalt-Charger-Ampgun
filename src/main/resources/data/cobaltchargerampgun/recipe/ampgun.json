@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:diamond"
+    },
+    "C": {
+      "item": "minecraft:piston"
+    }
+  },
+  "pattern": [
+    "BBB",
+    "CCC",
+    "BBB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "cobaltchargerampgun:ampgun"
+  }
+
+}

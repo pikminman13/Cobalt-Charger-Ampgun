@@ -1,8 +1,7 @@
 package net.pikminman13.CobaltChargerAmpgun.block;
 
 import net.pikminman13.CobaltChargerAmpgun.CobaltChargerAmpgun;
-import net.pikminman13.CobaltChargerAmpgun.item.ModItems;
-import net.minecraft.util.valueproviders.UniformInt;
+import net.pikminman13.CobaltChargerAmpgun.common.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
