@@ -1,4 +1,4 @@
-/*package net.pikminman13.CobaltChargerAmpgun.common.item.interfaces;
+package net.pikminman13.CobaltChargerAmpgun.common.item.interfaces;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
@@ -51,4 +51,4 @@ public abstract class FEBase extends Item {
         return super.getBarColor(stack);
     }
 
-}*/
+}
