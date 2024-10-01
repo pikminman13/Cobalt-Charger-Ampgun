@@ -26,7 +26,7 @@ public abstract class FEBase extends Item {
 
     @Override
     public boolean isBarVisible(ItemStack stack) {
-        if (stack.getItem() instanceof FEItem RFItem) {
+        if (stack.getItem() instanceof FEItem FEItem) {
             return FEItem.isPowerBarVisible(stack);
         }
         return super.isBarVisible(stack);
@@ -34,7 +34,7 @@ public abstract class FEBase extends Item {
 
     @Override
     public int getBarWidth(ItemStack stack) {
-        if (stack.getItem() instanceof FEBase RFItem) {
+        if (stack.getItem() instanceof FEItem FEItem) {
             return FEItem.getPowerBarWidth(stack);
         }
         return super.getBarWidth(stack);
@@ -42,7 +42,7 @@ public abstract class FEBase extends Item {
 
     @Override
     public int getBarColor(ItemStack stack) {
-        if (stack.getItem() instanceof FEBase RFItem) {
+        if (stack.getItem() instanceof FEItem FEItem) {
             int color = FEItem.getPowerBarColor(stack);
             if (color == -1)
                 return super.getBarColor(stack);

@@ -52,6 +52,7 @@ public class CobaltChargerAmpgun
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+        modEventBus.addListener(this::registerCapabilities);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -109,18 +110,18 @@ public class CobaltChargerAmpgun
     }
 
 
-    private void attachCapabilities(RegisterCapabilitiesEvent event) {
+
+    private void registerCapabilities(RegisterCapabilitiesEvent event) {
+
         event.registerItem(Capabilities.EnergyStorage.ITEM, (itemStack, context) -> {
-                    int capacity = 20000;
-                    if (itemStack.getItem() instanceof FEItem energyItem) {
-                        capacity = energyItem.getMaxCapacity();
+                    int capacity = 1000000; //Default
+                    if (itemStack.getItem() instanceof FEItem poweredItem) {
+                        capacity = poweredItem.getMaxEnergy();
                     }
                     return new EnergyItemstack(capacity, itemStack);
                 },
                 ModItems.AMPGUN.get()
         );
+
     }
-
-
-
 }

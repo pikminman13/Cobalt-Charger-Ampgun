@@ -58,4 +58,8 @@ public interface FEItem {
     default int getMaxTransferRate() {
         return 100;
     }
+
+    default int getMaxEnergy() {
+        return 10000;
+    }
 }
