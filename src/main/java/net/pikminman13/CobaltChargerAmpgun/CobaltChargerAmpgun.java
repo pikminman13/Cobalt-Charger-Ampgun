@@ -28,6 +28,8 @@ import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 
+import static net.pikminman13.CobaltChargerAmpgun.common.item.ModItems.AMPGUN;
+
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(CobaltChargerAmpgun.MODID)
 public class CobaltChargerAmpgun
@@ -79,7 +81,7 @@ public class CobaltChargerAmpgun
     {
         if (event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
-            event.accept(ModItems.AMPGUN);
+            event.accept(AMPGUN);
         }
 
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
