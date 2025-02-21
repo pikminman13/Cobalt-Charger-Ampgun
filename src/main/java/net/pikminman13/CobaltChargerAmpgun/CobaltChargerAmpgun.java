@@ -2,7 +2,7 @@ package net.pikminman13.CobaltChargerAmpgun;
 
 import net.neoforged.neoforge.capabilities.Capabilities;
 import net.pikminman13.CobaltChargerAmpgun.block.ModBlocks;
-import net.pikminman13.CobaltChargerAmpgun.common.capability.EnergyItemstack;
+import net.pikminman13.CobaltChargerAmpgun.common.capability.EnergyStorageItemstack;
 import net.pikminman13.CobaltChargerAmpgun.common.item.ModCreativeModeTabs;
 import net.pikminman13.CobaltChargerAmpgun.common.item.ModItems;
 import net.pikminman13.CobaltChargerAmpgun.common.item.interfaces.FEItem;
@@ -120,7 +120,7 @@ public class CobaltChargerAmpgun
                     if (itemStack.getItem() instanceof FEItem poweredItem) {
                         capacity = poweredItem.getMaxEnergy();
                     }
-                    return new EnergyItemstack(capacity, itemStack);
+                    return new EnergyStorageItemstack(capacity, itemStack);
                 },
                 ModItems.AMPGUN.get()
         );

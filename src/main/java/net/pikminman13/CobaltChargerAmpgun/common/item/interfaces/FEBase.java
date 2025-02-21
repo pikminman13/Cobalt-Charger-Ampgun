@@ -13,6 +13,7 @@ public abstract class FEBase extends Item {
     public FEBase(Properties pProperties) {
         super(pProperties);
     }
+    
 
     @Override
     public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flagIn) {

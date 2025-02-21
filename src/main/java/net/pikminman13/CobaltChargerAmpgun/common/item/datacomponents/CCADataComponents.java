@@ -1,5 +1,6 @@
 package net.pikminman13.CobaltChargerAmpgun.common.item.datacomponents;
 
+import net.minecraft.core.registries.Registries;
 import net.pikminman13.CobaltChargerAmpgun.CobaltChargerAmpgun;
 import com.mojang.serialization.Codec;
 import net.minecraft.core.component.DataComponentType;
@@ -12,7 +13,7 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 import org.checkerframework.checker.nullness.qual.Nullable;
 
 public class CCADataComponents {
-    public static final DeferredRegister<DataComponentType<?>> COMPONENTS = DeferredRegister.createDataComponents(CobaltChargerAmpgun.MODID);
+    public static final DeferredRegister<DataComponentType<?>> COMPONENTS = DeferredRegister.createDataComponents(Registries.DATA_COMPONENT_TYPE, CobaltChargerAmpgun.MODID);
 
     public static final DeferredHolder<DataComponentType<?>, DataComponentType<Integer>> FORGE_ENERGY = COMPONENTS.register(
             "forge_energy",

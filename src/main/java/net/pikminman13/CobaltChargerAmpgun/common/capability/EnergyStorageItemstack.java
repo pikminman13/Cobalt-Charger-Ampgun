@@ -7,10 +7,10 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.energy.EnergyStorage;
 import net.pikminman13.CobaltChargerAmpgun.common.item.datacomponents.CCADataComponents;
 
-public class EnergyItemstack extends EnergyStorage {
+public class EnergyStorageItemstack extends EnergyStorage {
     protected final ItemStack itemStack;
 
-    public EnergyItemstack(int capacity, ItemStack itemStack) {
+    public EnergyStorageItemstack(int capacity, ItemStack itemStack) {
         super(capacity, capacity, capacity, 0);
         this.itemStack = itemStack;
         this.energy = itemStack.getOrDefault(CCADataComponents.FORGE_ENERGY, 0);
@@ -22,12 +22,12 @@ public class EnergyItemstack extends EnergyStorage {
     }
 
     @Override
-    public int receiveEnergy(int maxReceive, boolean simulate){
-        if(!canReceive())
+    public int receiveEnergy(int maxReceive, boolean simulate) {
+        if (!canReceive())
             return 0;
 
         int energyReceived = Math.min(capacity - energy, Math.min(this.maxReceive, maxReceive));
-        if(!simulate) {
+        if (!simulate) {
             energy += energyReceived;
             itemStack.set(CCADataComponents.FORGE_ENERGY, energy);
         }
